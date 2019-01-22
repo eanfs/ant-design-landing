@@ -183,7 +183,8 @@ class NavController extends React.PureComponent {
         <ItemGroup title="近期所建" key="0">
           {localChild}
         </ItemGroup>
-      </Menu>);
+      </Menu>
+    );
   }
 
   onChangeDataOpenModal = () => {
@@ -278,7 +279,8 @@ class NavController extends React.PureComponent {
             placement="bottomRight"
           >
             {newIcon}
-          </Dropdown>) : newIcon}
+          </Dropdown>
+        ) : newIcon}
         <Modal
           title="当前编辑数据"
           visible={this.state.codeModalShow}
