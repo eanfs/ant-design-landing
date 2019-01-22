@@ -64,7 +64,8 @@ class Header extends React.Component {
               /* replace-end-value */
             }
           </a>
-        </Item>)
+        </Item>
+      )
       );
     return (
       <TweenOne
@@ -96,7 +97,8 @@ class Header extends React.Component {
               <em />
               <em />
               <em />
-            </div>)
+            </div>
+          )
           }
           <TweenOne
             {...dataSource.Menu}
@@ -116,7 +118,8 @@ class Header extends React.Component {
             </Menu>
           </TweenOne>
         </div>
-      </TweenOne>);
+      </TweenOne>
+    );
   }
 }
 

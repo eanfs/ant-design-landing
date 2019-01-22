@@ -87,7 +87,8 @@ class Header extends React.Component {
               <em />
               <em />
               <em />
-            </div>)
+            </div>
+          )
           }
           <TweenOne
             {...dataSource.Menu}
@@ -101,7 +102,8 @@ class Header extends React.Component {
             {navChildren}
           </TweenOne>
         </div>
-      </TweenOne>);
+      </TweenOne>
+    );
   }
 }
 

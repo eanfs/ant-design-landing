@@ -24,6 +24,7 @@ module.exports = {
   },
   pick: {
     docs: pickerGenerator(),
+    'docs/concept': pickerGenerator('concept'),
     'docs/guide': pickerGenerator('guide'),
     'docs/use': pickerGenerator('use'),
     'docs/edit': pickerGenerator('edit'),
