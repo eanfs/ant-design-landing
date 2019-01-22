@@ -1,12 +1,12 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { Row, Col } from 'antd';
-import * as utils from '../utils';
+// import * as utils from '../utils';
 
 class Footer extends React.PureComponent {
   render() {
-    const { pathname } = this.props.location;
-    const isZhCN = utils.isZhCN(pathname);
+    // const { pathname } = this.props.location;
+    // const isZhCN = utils.isZhCN(pathname);
     return (
       <footer id="footer" className="dark">
         <div className="footer-wrap">
