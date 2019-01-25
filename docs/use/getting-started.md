@@ -8,112 +8,72 @@ title:
   en-US: Getting-started
 ---
 
-Landing 编辑器里下载的文件为 Home 文件包，导出的文件为 [React](https://reactjs.org/) 文件 `.jsx`， 样式采用的为 [less](http://lesscss.org/) 文件 `.less`， 如遇到问题时，建议先学习一下相关的语言特性，再前往 [Landing issues](https://github.com/ant-design/ant-design-landing/issues) 提问。
 
-## 目录结构
+开始开发
+OAuth2简介
+企业微信OAuth2接入流程
+使用OAuth2前须知
+关于网页授权的可信域名
+关于UserID机制
+静默授权与手动授权
+缓存方案建议
+企业微信提供了OAuth的授权登录方式，可以让从企业微信终端打开的网页获取成员的身份信息，从而免去登录的环节。
+企业应用中的URL链接（包括自定义菜单或者消息中的链接），均可通过OAuth2.0验证接口来获取成员的UserId身份信息。
 
-```
-|── less
-|   └── index.less              
-|   └── common.less            # 通用样式
-|   └── content.less           # 内容模块通用样式
-|   └── custom.less            # less 变量文件
-|   └── edit.less              # 编辑器里编辑后生成的样式
-|   └── Banner0.less *         # 相关模块样式
-|   └── Content0.less *
-|     ...
-|── data.source.js           # 内容数据文件
-|── index.js                 # 主入口
-|── Banner0.jsx *            # 相关模块
-|── Content0.jsx *
-|   ...
-```
+OAuth2简介
+OAuth2的设计背景，在于允许用户在不告知第三方自己的帐号密码情况下，通过授权方式，让第三方服务可以获取自己的资源信息。
+详细的协议介绍，开发者可以参考RFC 6749。
 
-> 以上加 * 号为可配置内容，当你在编辑器里选择了哪些模块，那么将对应出现相对的文件。
+下面简单说明OAuth2中最经典的Authorization Code模式，流程如下：
 
-### 数据文件
 
-- data.source.js
-```jsx
-import React from 'react';
-export const Banner00DataSource = {
-  OverPack: { replay: true, playScale: [0.3, 0.1], className: 'banner0' },
-  textWrapper: { className: 'banner0-text-wrapper' },
-  title: {
-    className: 'banner0-title',
-    children: (
-      <span>
-        <img
-          width="100%"
-          src="https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png"
-          alt="img"
-        />
-      </span>
-    ),
-  },
-  content: { className: 'banner0-content', children: '一个高效的页面动画解决方案' },
-  button: { className: 'banner0-button', children: 'Learn More' },
-};
-```
+流程图中，包含四个角色。
 
-所有的内容都在此文件里编辑，组件里以 `{ ...Banner00DataSource.title }` 续用以上参数，以 `props` 传入。
+ResourceOwner为资源所有者，即为用户
+User-Agent为浏览器
+AuthorizationServer为认证服务器，可以理解为用户资源托管方，比如企业微信服务端
+Client为第三方服务
+调用流程为：
+A) 用户访问第三方服务，第三方服务通过构造OAuth2链接（参数包括当前第三方服务的身份ID，以及重定向URI），将用户引导到认证服务器的授权页
+B) 用户选择是否同意授权
+C) 若用户同意授权，则认证服务器将用户重向到第一步指定的重定向URI，同时附上一个授权码。
+D) 第三方服务收到授权码，带上授权码来源的重定向URI，向认证服务器申请凭证。
+E) 认证服务器检查授权码和重定向URI的有效性，通过后颁发AccessToken（调用凭证）
 
-变量名： 请仔细查看里面的变量，变量名为 `模块的名称 + 当前序列 + DataSource`, 如 `Banner00DataSource` 模块名为 `Banner0`， 序列为 `0`。
+D)与E)的调用为后台调用，不通过浏览器进行
 
-## 脚手架里使用
+企业微信OAuth2接入流程
 
-请查看相关的脚手架使用说明。
 
-## 安装依赖
+图1 企业微信OAuth2流程图
+使用OAuth2前须知
+关于网页授权的可信域名
+REDIRECT_URL中的域名，需要先配置至应用的“可信域名”，否则跳转时会提示“redirect_uri参数错误”。
+要求配置的可信域名，必须与访问链接的域名完全一致。举个例子：
 
-我们依赖 ant design 的相关组件，动效依赖 ant motion 里相关动效组件，具体查看以下：
+假定重定向访问的链接是：http://mail.qq.com:8080/cgi-bin/helloworld：
+配置域名	是否正确	原因
+mail.qq.com:8080	correct	配置域名与访问域名完全一致
+email.qq.com	error	配置域名必须与访问域名完全一致
+support.mail.qq.com	error	配置域名必须与访问域名完全一致
+*.qq.com	error	不支持泛域名设置
+mail.qq.com	error	配置域名必须与访问域名完全一致，包括端口号
+假定配置的可信域名是 mail.qq.com：
+访问链接	是否正确	原因
+https://mail.qq.com/cgi-bin/helloworld	correct	配置域名与访问域名完全一致
+http://mail.qq.com/cgi-bin/redirect	correct	配置域名与访问域名完全一致，与协议头/链接路径无关
+https://exmail.qq.com/cgi-bin/helloworld	error	配置域名必须与访问域名完全一致
+关于UserID机制
+UserId用于在一个企业内唯一标识一个用户，通过网页授权接口可以获取到当前用户的UserId信息，如果需要获取用户的更多信息可以调用 通讯录管理 - 成员接口 来获取。
 
-### 基本必要组件依赖
+静默授权与手动授权
+静默授权：用户点击链接后，页面直接302跳转至 redirect_uri?code=CODE&state=STATE
+手动授权：用户点击链接后，会弹出一个中间页，让用户选择是否授权，用户确认授权后再302跳转至 redirect_uri?code=CODE&state=STATE
 
-```
-npm install antd enquire-js rc-queue-anim rc-scroll-anim rc-tween-one --save;
-npm install rc-banner-anim --save;// 如果用的是多屏滑动型的 banner，加上这条。
-```
-
-### 按需加载 ant design
-
-> umi 或 ant design pro 无需安装此项;
-
-```
-npm install babel-plugin-import --save-dev;
-```
-
-需要注意： 目前加载了全部的 ant design 的 less, 如使用了 `babel-plugin-import`，请将 `less/custom.less` 里的 `@import "~antd/lib/style/index.less";` 更换成 @import "~antd/lib/style/themes/default.less";
-
-详细使用请查看 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)
-
-## 配置自定义皮肤
-
-[参考](https://ant.design/docs/react/customize-theme-cn) 里面的 package.theme（推荐);
-
-## 配置 html scale
-
-为更好的响应无线端的使用，Landing 需要你在你的 html 文件的 head 里配置以下代码：
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
-
-## 样式
-
-Ant Design Landing 默认使用 less 作为样式语言，整个文件的 less 没使用 `css-modules` 需直接使用。
-
-如果你的脚手架使用了 `css-modules` 请在 `index.less` 里加上 `:global`, [global 的使用详细查看](https://github.com/css-modules/css-modules#usage-with-preprocessors)
-
-```less
-:global {
-  @import './global.less';
-  @import './common.less';
-  @import './custom.less';
-  @import './content.less';
-  @import './nav.less';
-  @import './content0.less';
-  @import './footer.less';
-  @import './point.less';
-  @import './edit.less';
-}
-```
+手动授权用户确认页面
+缓存方案建议
+通过OAuth2.0验证接口获取成员身份会有一定的时间开销。对于频繁获取成员身份的场景，建议采用如下方案：
+1、企业应用中的URL链接直接填写企业自己的页面地址
+2、成员操作跳转到步骤1的企业页面时，企业后台校验是否有标识成员身份的cookie信息，此cookie由企业生成
+3、如果没有匹配的cookie，则重定向到OAuth验证链接，获取成员的身份信息后，由企业后台植入标识成员身份的cookie信息
+4、根据cookie获取成员身份后，再进入相应的页面

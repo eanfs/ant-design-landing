@@ -1,7 +1,7 @@
 ---
 order: 0
 category:
-  zh-CN: 设计指引
+  zh-CN: 应用授权
   en-US: Guide
 title: 
   zh-CN: 企业授权应用

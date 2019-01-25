@@ -1,7 +1,7 @@
 ---
 order: 3
 category:
-  zh-CN: 设计指引
+  zh-CN: 应用授权
   en-US: Guide
 title: 
   zh-CN: 设置授权配置

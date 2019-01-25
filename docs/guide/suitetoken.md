@@ -1,7 +1,7 @@
 ---
 order: 1
 category:
-  zh-CN: 设计指引
+  zh-CN: 应用授权
   en-US: Guide
 title: 
   zh-CN: 获取第三方应用凭证
