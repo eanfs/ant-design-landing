@@ -234,7 +234,8 @@ class Layout extends React.Component {
         ref={(c) => { this.dom = c; }}
       >
         {children}
-      </div>);
+      </div>
+    );
   }
 }
 

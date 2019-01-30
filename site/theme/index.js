@@ -24,8 +24,11 @@ module.exports = {
   },
   pick: {
     docs: pickerGenerator(),
+    'docs/concept': pickerGenerator('concept'),
     'docs/guide': pickerGenerator('guide'),
-    'docs/use': pickerGenerator('use'),
+    'docs/oauth': pickerGenerator('oauth'),
+    'docs/config': pickerGenerator('config'),
+    'docs/callback': pickerGenerator('callback'),
     'docs/edit': pickerGenerator('edit'),
   },
   plugins: [

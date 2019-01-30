@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">Ant Design Landing</h1>
-<div align="center">Ant Design 的 Landing Page 模板与设计指引</div>
+<div align="center">Ant Design 的 Landing Page 模板与应用授权</div>
 
 <div align="center">
   此网站的内容是从 <a href="https://motion.ant.design">Ant Motion</a> 模板区块中分离出来.
@@ -18,7 +18,7 @@ Landing 是运用 Ant Motion 动效组件来搭建完成的页面模板，拥有
 
 ## 三大特性
 
-- [设计指引](https://landing.ant.design/docs/introduce)
+- [应用授权](https://landing.ant.design/docs/introduce)
 - [源文件下载](https://landing.ant.design/docs/download)
 - [响应式布局](https://landing.ant.design/docs/guide/layout)
 
