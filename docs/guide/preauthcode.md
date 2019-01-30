@@ -12,7 +12,7 @@ title:
 该API用于获取预授权码。预授权码用于企业授权时的第三方服务商安全验证。
 
 请求方式：GET（HTTPS）
-请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/get_pre_auth_code?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://qyapi.weixin.nextxx.cn/openapi/service/get_pre_auth_code?suite_access_token=SUITE_ACCESS_TOKEN
 
 > 参数说明：
 

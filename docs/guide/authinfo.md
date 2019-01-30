@@ -12,7 +12,7 @@ title:
 该API用于通过永久授权码换取NexT+的授权信息。 永久code的获取，是通过临时授权码使用get_permanent_code 接口获取到的permanent_code。
 
 请求方式：POST（HTTPS）
-请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/get_auth_info?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://qyapi.weixin.nextxx.cn/openapi/service/get_auth_info?suite_access_token=SUITE_ACCESS_TOKEN
 
 > 请求包体：
 >

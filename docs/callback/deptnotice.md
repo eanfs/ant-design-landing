@@ -12,7 +12,7 @@ title:
 
 ### 新增部门事件
 >请求方式：POST（HTTPS）  
->请求地址： https://127.0.0.1/suite/receive?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
+>请求地址： https://127.0.0.1/suite/callback?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
 
 请求包体：
 ```xml
@@ -46,7 +46,7 @@ title:
 
 ### 更新部门事件
 请求方式：POST（HTTPS）
-请求地址： https://127.0.0.1/suite/receive?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
+请求地址： https://127.0.0.1/suite/callback?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
 
 > 请求包体：
 ```xml
@@ -77,7 +77,7 @@ title:
 
 ### 删除部门事件
 请求方式：POST（HTTPS）
-请求地址： https://127.0.0.1/suite/receive?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
+请求地址： https://127.0.0.1/suite/callback?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
 
 请求包体：
 ```xml
@@ -90,13 +90,13 @@ title:
     <Id>2</Id>
 </xml>
 ```
-参数说明：
+>参数说明：
 
-参数 | 说明
-SuiteId | 第三方应用ID
-AuthCorpId | 授权企业的CorpID
-InfoType | 固定为change_contact
-TimeStamp | 时间戳
-ChangeType | 固定为delete_party
-Id | 部门Id
-说明： 由通讯录应用发起的删除部门触发的事件不回调给通讯录应用。
+|参数 | 说明|
+| -------- | -------------------------------------------- |
+|SuiteId | 第三方应用ID|
+|AuthCorpId | 授权企业的CorpID|
+|InfoType | 固定为change_contact|
+TimeStamp | 时间戳|
+|ChangeType | 固定为delete_party|
+|Id | 部门Id|
