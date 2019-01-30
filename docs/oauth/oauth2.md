@@ -11,7 +11,7 @@ title:
 
 ## 获取访问用户身份
 请求方式：GET（HTTPS）
-请求地址：https://qyapi.weixin.nextxx.cn/openapi/service/getuserinfo3rd?access_token=SUITE_ACCESS_TOKEN&code=CODE
+请求地址：https://open.nextxx.cn/openapi/service/getuserinfo3rd?access_token=SUITE_ACCESS_TOKEN&code=CODE
 
 >参数说明：
 

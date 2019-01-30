@@ -46,7 +46,7 @@ title:
         <Type>1</Type>
         <Web>
             <Title><![CDATA[NexT+]]></Title>
-            <Url><![CDATA[https://work.weixin.nextxx.cn]]></Title>
+            <Url><![CDATA[https://open.nextxx.cn]]></Title>
         </Web>
         </Item>
     </ExtAttr>
@@ -121,7 +121,7 @@ title:
         <Type>1</Type>
         <Web>
             <Title><![CDATA[NexT+]]></Title>
-            <Url><![CDATA[https://work.weixin.nextxx.cn]]></Title>
+            <Url><![CDATA[https://open.nextxx.cn]]></Title>
         </Web>
         </Item>
     </ExtAttr>

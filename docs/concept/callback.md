@@ -161,7 +161,7 @@ NexT+在回调企业指定的URL时，是通过特定的IP发送出去的。如�
 
 ```__react
 const callbackData = [
-  { title: '回调服务demo', content: '开发者可参考 NexT+的实现', name: 'encyptdemo', url: 'http://open.work.weixin.nextxx.cn/wwopen/downloadfile/java.zip', img: 'https://gw.alipayobjects.com/zos/rmsportal/SVDdpZEbAlWBFuRGIIIL.svg' },
+  { title: '回调服务demo', content: '开发者可参考 NexT+的实现', name: 'encyptdemo', url: 'http://open.open.nextxx.cn/wwopen/downloadfile/java.zip', img: 'https://gw.alipayobjects.com/zos/rmsportal/SVDdpZEbAlWBFuRGIIIL.svg' },
 ];
 
 
