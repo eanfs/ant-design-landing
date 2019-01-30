@@ -45,7 +45,7 @@ title:
         <Name><![CDATA[卡号]]></Name>
         <Type>1</Type>
         <Web>
-            <Title><![CDATA[企业微信]]></Title>
+            <Title><![CDATA[NexT+]]></Title>
             <Url><![CDATA[https://work.weixin.qq.com]]></Title>
         </Web>
         </Item>
@@ -70,7 +70,7 @@ Mobile | 手机号码，仅通讯录管理应用可获取|
 Position | 职位信息。长度为0~64个字节，仅通讯录管理应用可获取|
 Gender | 性别。1表示男性，2表示女性
 Email | 邮箱，仅通讯录管理应用可获取
-Status | 激活状态：1=激活或关注， 2=禁用， 4=未激活 已激活代表已激活企业微信或已关注微工作台（原企业号）。未激活代表既未激活企业微信又未关注微工作台（原企业号）
+Status | 激活状态：1=激活或关注， 2=禁用， 4=未激活 已激活代表已激活NexT+或已关注微工作台（原企业号）。未激活代表既未激活NexT+又未关注微工作台（原企业号）
 Avatar | 头像url。注：如果要获取小图将url最后的”/0”改成”/100”即可，仅通讯录管理应用可获取
 Alias | 成员别名
 Telephone | 座机，仅通讯录管理应用可获取
@@ -120,7 +120,7 @@ Url | 网页的url
         <Name><![CDATA[卡号]]></Name>
         <Type>1</Type>
         <Web>
-            <Title><![CDATA[企业微信]]></Title>
+            <Title><![CDATA[NexT+]]></Title>
             <Url><![CDATA[https://work.weixin.qq.com]]></Title>
         </Web>
         </Item>

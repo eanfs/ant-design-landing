@@ -62,7 +62,7 @@ export default class Article extends React.PureComponent {
       ['ul', { className: 'toc' }].concat(getChildren(content.toc))
     ));
     return (
-      <DocumentTitle title={`${title[locale] || title} - Ant Design Landing`}>
+      <DocumentTitle title={`${title[locale] || title} - Esenyun Open Platform`}>
         <article className="markdown" ref={(node) => { this.node = node; }}>
           {isNotTranslated && (
             <Alert

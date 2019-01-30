@@ -9,7 +9,7 @@ title:
 ---
 
 ## 获取企业授权信息  
-该API用于通过永久授权码换取企业微信的授权信息。 永久code的获取，是通过临时授权码使用get_permanent_code 接口获取到的permanent_code。
+该API用于通过永久授权码换取NexT+的授权信息。 永久code的获取，是通过临时授权码使用get_permanent_code 接口获取到的permanent_code。
 
 请求方式：POST（HTTPS）
 请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/get_auth_info?suite_access_token=SUITE_ACCESS_TOKEN
@@ -97,7 +97,7 @@ title:
 |access_token | 授权方（企业）access_token,最长为512字节|
 |expires_in | 授权方（企业）access_token超时时间|
 |auth_corp_info | 授权方企业信息|
-|corpid | 授权方企业微信id|
+|corpid | 授权方NexT+id|
 |corp_name | 授权方企业名称|
 |corp_type | 授权方企业类型，认证号：verified, 注册号：unverified|
 |corp_square_logo_url | 授权方企业方形头像|

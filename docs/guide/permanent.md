@@ -102,9 +102,9 @@ title:
 | --------    | -------------------------------------------- | -------- |
 |access_token | 授权方（企业）access_token,最长为512字节|
 |expires_in | 授权方（企业）access_token超时时间|
-|permanent_code | 企业微信永久授权码,最长为512字节|
+|permanent_code | NexT+永久授权码,最长为512字节|
 |auth_corp_info | 授权方企业信息|
-|corpid | 授权方企业微信id|
+|corpid | 授权方NexT+id|
 |corp_name | 授权方企业名称|
 |corp_type | 授权方企业类型，认证号：verified, 注册号：unverified|
 |corp_square_logo_url | 授权方企业方形头像|

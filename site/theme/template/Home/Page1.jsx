@@ -11,18 +11,23 @@ const isCN = isZhCN(location.href);
 const page1 = [
   {
     title: <FormattedMessage id="app.home.fatures.language" />,
-    link: `/docs/introduce${isCN ? '-cn' : ''}`,
-    src: 'https://gw.alipayobjects.com/zos/rmsportal/QCcDSfdbCIbVSsUZJaQK.svg',
+    link: `/docs/guide/workflow1${isCN ? '-cn' : ''}`,
+    src: 'https://download.esenyun.com/resources/authorize.svg',
+  },
+  {
+    title: <FormattedMessage id="app.home.fatures.authorize" />,
+    link: `/docs/oauth/auth-started${isCN ? '-cn' : ''}`,
+    src: 'https://download.esenyun.com/resources/userinfo.svg',
   },
   {
     title: <FormattedMessage id="app.home.fatures.sketch" />,
-    link: `/docs/download${isCN ? '-cn' : ''}`,
-    src: 'https://gw.alipayobjects.com/zos/rmsportal/hMSnSxMzmiGSSIXxFtNf.svg',
+    link: `/docs/config/getting-started${isCN ? '-cn' : ''}`,
+    src: 'https://download.esenyun.com/resources/addressbook.svg',
   },
   {
     title: <FormattedMessage id="app.home.fatures.responsive" />,
-    link: `/docs/guide/layout${isCN ? '-cn' : ''}`,
-    src: 'https://gw.alipayobjects.com/zos/rmsportal/OMEOieDFPYDcWXMpqqzd.svg',
+    link: `/docs/callback/callbackintro${isCN ? '-cn' : ''}`,
+    src: 'https://download.esenyun.com/resources/message.svg',
   },
 ];
 

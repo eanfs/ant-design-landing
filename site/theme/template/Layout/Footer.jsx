@@ -13,12 +13,12 @@ class Footer extends React.PureComponent {
           <Row>
             <Col md={6} sm={24} xs={24}>
               <div className="footer-center">
-                <h2>Ant Design Landing</h2>
-                <div>
+                <h2>Esenyun Open Platform</h2>
+                {/* <div>
                   <a target="_blank " href="https://github.com/ant-design/ant-design-landing">
                     <FormattedMessage id="app.footer.repo" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col md={6} sm={24} xs={24}>
@@ -35,9 +35,9 @@ class Footer extends React.PureComponent {
               <div className="footer-center">
                 <h2><FormattedMessage id="app.footer.community" /></h2>
                 <div>
-                  <a target="_blank" rel="noopener" href="https://github.com/ant-design/ant-design-landing/issues">
+                  {/* <a target="_blank" rel="noopener" href="https://github.com/ant-design/ant-design-landing/issues">
                     <FormattedMessage id="app.footer.issues" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </Col>
