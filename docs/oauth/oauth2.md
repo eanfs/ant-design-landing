@@ -37,11 +37,7 @@ errcode | 返回码
 errmsg | 对返回码的文本描述内容
 CorpId | 用户所属企业的corpid
 UserId | 用户在企业内的UserID，如果该企业与第三方应用有授权关系时，返回明文UserId，否则返回密文UserId
-<<<<<<< HEAD
-DeviceId | 手机设备号(由企业微信在安装时随机生成，删除重装会改变，升级不受影响)
-=======
 DeviceId | 手机设备号(由NexT+在安装时随机生成，删除重装会改变，升级不受影响)
->>>>>>> master
 user_ticket | 成员票据，最大为512字节。
 scope为snsapi_userinfo或snsapi_privateinfo，且用户在应用可见范围之内时返回此参数。
 后续利用该参数可以获取用户信息或敏感信息，参见“第三方使用user_ticket获取成员详情”。
@@ -58,11 +54,7 @@ b) 若用户不属于任何企业，返回示例如下：
 errcode | 返回码
 errmsg | 对返回码的文本描述内容
 OpenId | 非企业成员的标识，对当前服务商唯一
-<<<<<<< HEAD
-DeviceId | 手机设备号(由企业微信在安装时随机生成，删除重装会改变，升级不受影响)
-=======
 DeviceId | 手机设备号(由NexT+在安装时随机生成，删除重装会改变，升级不受影响)
->>>>>>> master
 出错返回示例：
 
 {
