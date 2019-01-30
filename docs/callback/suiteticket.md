@@ -9,7 +9,11 @@ title:
 ---
 
 推送suite_ticket
+<<<<<<< HEAD
 企业微信服务器会定时（每十分钟）推送ticket。ticket会实时变更，并用于后续接口的调用。
+=======
+NexT+服务器会定时（每十分钟）推送ticket。ticket会实时变更，并用于后续接口的调用。
+>>>>>>> master
 请求方式：POST（HTTPS）
 请求地址：https://127.0.0.1/suite/receive?msg_signature=3a7b08bb8e6dbce3c9671d6fdb69d15066227608&timestamp=1403610513&nonce=380320359
 

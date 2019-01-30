@@ -4,7 +4,6 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Link from 'rc-scroll-anim/lib/ScrollLink';
 import BannerAnim, { Element } from 'rc-banner-anim';
-import { getNewHref } from '../../../utils';
 
 const { BgElement } = Element;
 
@@ -114,23 +113,14 @@ export default function Banner({ isMobile }) {
             <i key="top" className="horizontal top" />
             <i key="right" className="vertical right" />
             <i key="bottom" className="horizontal bottom" />
-            <img key="img" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/SVDdpZEbAlWBFuRGIIIL.svg" />
           </QueueAnim>
           <p className="introduce" key="introduce">
             <FormattedMessage id="app.home.introduce" />
           </p>
           <div className="button-wrapper" key="button">
-            <Link component="a" toHash={false} to="page2" className="btn-temp home-button">
-              <FormattedMessage id="app.home.select-template" />
+            <Link component="a" toHash={false} to="page1" className="btn-temp home-button">
+              <FormattedMessage id="app.home.enter-editor" />
             </Link>
-            {!isMobile && (
-              <a
-                className="btn-editor home-button"
-                href={getNewHref('7112')}
-              >
-                <FormattedMessage id="app.home.enter-editor" />
-              </a>
-            )}
           </div>
         </QueueAnim>
       </Element>

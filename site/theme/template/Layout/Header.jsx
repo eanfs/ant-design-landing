@@ -6,8 +6,6 @@ import { Row, Col, Menu } from 'antd';
 
 import PhoneNav from './PhoneNav';
 import * as utils from '../utils';
-import { getNewHref } from '../../../utils';
-
 
 class Header extends React.Component {
   static contextTypes = {
@@ -29,13 +27,12 @@ class Header extends React.Component {
     );
   }
 
-  getMenuToRender = (lang) => {
+  getMenuToRender = () => {
     const { isMobile, location, intl } = this.props;
     const isZhCN = intl.locale === 'zh-CN';
     const menuMode = isMobile ? 'inline' : 'horizontal';
     const module = location.pathname.replace(/(^\/|\/$)/g, '').split('/')[0];// .slice(0, -1).join('/');
     const activeMenuItem = (module.match('index') && 'home') || module;
-    const href = getNewHref('7112');
     return (
       <Menu mode={menuMode} selectedKeys={[activeMenuItem]} id="nav" key="nav">
         <Menu.Item key="home">
@@ -54,22 +51,6 @@ class Header extends React.Component {
             <FormattedMessage id="app.header.menu.docs" />
           </Link>
         </Menu.Item> */}
-        {!isMobile && (
-          <Menu.Item key="edit">
-            <a
-              href={href}
-            >
-              <FormattedMessage id="app.header.menu.edit" />
-            </a>
-          </Menu.Item>
-        )}
-        {
-          isMobile && (
-            <Menu.Item key="lang" onClick={this.handleLangChange}>
-              {lang}
-            </Menu.Item>
-          )
-        }
       </Menu>
     );
   }
@@ -89,9 +70,9 @@ class Header extends React.Component {
         <Row className="page">
           <Col md={6} sm={24}>
             <Link className="logo" to={utils.getLocalizedPathname('/', isZhCN)}>
-              <img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/SVDdpZEbAlWBFuRGIIIL.svg" />
+              <img alt="logo" src="https://download.esenyun.com/resources/nextogo.svg" />
               <span>
-                LANDING
+                ESENYUN
               </span>
             </Link>
           </Col>
@@ -100,7 +81,7 @@ class Header extends React.Component {
               <Col md={18} sm={0}>
                 <div className="menu">
                   {menu}
-                  <a
+                  {/* <a
                     href="https://github.com/ant-design/ant-design-landing"
                     alt="git"
                     target="_blank"
@@ -110,7 +91,7 @@ class Header extends React.Component {
                   </a>
                   <a className="gitbtn" onClick={this.handleLangChange}>
                     {lang}
-                  </a>
+                  </a> */}
                 </div>
               </Col>
             )

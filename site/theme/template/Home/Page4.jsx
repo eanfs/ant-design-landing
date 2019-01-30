@@ -4,7 +4,8 @@ import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { FormattedMessage } from 'react-intl';
 
 import { svgBgToParallax } from './utils';
-import { getNewHref } from '../../../utils';
+import * as utils from '../utils';
+
 
 const svgBg = [
   <circle id="Oval-8" stroke="#13C2C2" cx="530" cy="195" r="5" />,
@@ -38,8 +39,8 @@ export default function Page2() {
             <FormattedMessage id="app.home.edit-slogen" />
           </p>
           <div key="a">
-            <a className="home-button" href={getNewHref('7112')}>
-              <FormattedMessage id="app.home.enter-editor" />
+            <a className="home-button" href={utils.getLocalizedPathname('/docs/introduce', 'zh-CN')}>
+              <FormattedMessage id="app.home.enter-doc" />
             </a>
           </div>
         </QueueAnim>
