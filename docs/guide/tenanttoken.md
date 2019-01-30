@@ -17,7 +17,7 @@ title:
 调用企业接口所需的access_token获取方法如下。
 
 请求方式：POST（HTTPS）
-请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/get_corp_token?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://qyapi.weixin.nextxx.cn/openapi/service/get_corp_token?suite_access_token=SUITE_ACCESS_TOKEN
 
 >请求包体：
 ```json

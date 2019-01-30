@@ -13,7 +13,7 @@ title:
 该API用于使用临时授权码换取授权方的永久授权码，并换取授权信息、企业access_token，临时授权码一次有效。建议第三方以userid为主键，来建立自己的管理员账号。
 
 请求方式：POST（HTTPS）  
-请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/get_permanent_code?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://qyapi.weixin.nextxx.cn/openapi/service/get_permanent_code?suite_access_token=SUITE_ACCESS_TOKEN
 
 > 请求包体：
 ```json

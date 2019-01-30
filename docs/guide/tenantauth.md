@@ -12,7 +12,7 @@ title:
 该接口可对某次授权进行配置。可支持测试模式（应用未发布时）。
 
 请求方式：POST（HTTPS）
-请求地址： https://qyapi.weixin.qq.com/cgi-bin/service/set_session_info?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://qyapi.weixin.nextxx.cn/openapi/service/set_session_info?suite_access_token=SUITE_ACCESS_TOKEN
 
 请求包体：
 
