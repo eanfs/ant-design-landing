@@ -1,8 +1,8 @@
 ---
 order: 0
 category:
-  zh-CN: 使用教程
-  en-US: Tutorial
+  zh-CN: 授权登录
+  en-US: OAuth
 title: 
   zh-CN: 开始使用
   en-US: Getting-started
@@ -52,17 +52,17 @@ REDIRECT_URL中的域名，需要先配置至应用的“可信域名”，否�
 要求配置的可信域名，必须与访问链接的域名完全一致。举个例子：
 
 假定重定向访问的链接是：http://mail.qq.com:8080/cgi-bin/helloworld：
-配置域名	是否正确	原因
-mail.qq.com:8080	correct	配置域名与访问域名完全一致
-email.qq.com	error	配置域名必须与访问域名完全一致
-support.mail.qq.com	error	配置域名必须与访问域名完全一致
-*.qq.com	error	不支持泛域名设置
-mail.qq.com	error	配置域名必须与访问域名完全一致，包括端口号
+配置域名 | 是否正确 | 原因
+mail.qq.com:8080 | correct | 配置域名与访问域名完全一致
+email.qq.com | error | 配置域名必须与访问域名完全一致
+support.mail.qq.com | error | 配置域名必须与访问域名完全一致
+*.qq.com | error | 不支持泛域名设置
+mail.qq.com | error | 配置域名必须与访问域名完全一致，包括端口号
 假定配置的可信域名是 mail.qq.com：
-访问链接	是否正确	原因
-https://mail.qq.com/cgi-bin/helloworld	correct	配置域名与访问域名完全一致
-http://mail.qq.com/cgi-bin/redirect	correct	配置域名与访问域名完全一致，与协议头/链接路径无关
-https://exmail.qq.com/cgi-bin/helloworld	error	配置域名必须与访问域名完全一致
+访问链接 | 是否正确 | 原因
+https://mail.qq.com/cgi-bin/helloworld | correct | 配置域名与访问域名完全一致
+http://mail.qq.com/cgi-bin/redirect | correct | 配置域名与访问域名完全一致，与协议头/链接路径无关
+https://exmail.qq.com/cgi-bin/helloworld | error | 配置域名必须与访问域名完全一致
 关于UserID机制
 UserId用于在一个企业内唯一标识一个用户，通过网页授权接口可以获取到当前用户的UserId信息，如果需要获取用户的更多信息可以调用 通讯录管理 - 成员接口 来获取。
 
