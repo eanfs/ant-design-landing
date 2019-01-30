@@ -23,8 +23,8 @@ title:
     </xml>
 参数说明：
 
-参数	说明
-SuiteId	第三方应用的SuiteId
-InfoType	suite_ticket
-TimeStamp	时间戳
-SuiteTicket	Ticket内容，最长为512字节
+参数 | 说明
+SuiteId | 第三方应用的SuiteId
+InfoType | suite_ticket
+TimeStamp | 时间戳
+SuiteTicket | Ticket内容，最长为512字节
