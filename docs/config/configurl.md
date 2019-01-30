@@ -4,40 +4,31 @@ category:
   zh-CN: 开发配置
   en-US: Config
 title: 
-  zh-CN: 获取访问用户身份
+  zh-CN: 配置回调服务
   en-US: Use in pro 2.x
 ---
 
-## 获取访问用户身份
-请求方式：GET（HTTPS）
-请求地址：https://open.nextxx.cn/openapi/service/getuserinfo3rd?access_token=SUITE_ACCESS_TOKEN&code=CODE
+## 配置回调服务
 
->参数说明：
+配置回调服务时，需要能同时支持HttpGet以及HttpPost两种能力，
 
-|参数 | 必须 | 说明|
+
+>假定重定向访问的链接是：
+>http://mail.nextxx.cn:8080/openapi/helloworld
+
+|配置域名 | 是否正确 | 原因| 
 | -------- | -------- |-------------------------------------------- |
-|access_token | 是 | 第三方应用的suite_access_token，参见“获取第三方应用凭证”|
-|code | 是 | 通过成员授权获取到的code，最大为512字节。每次成员授权带上的code将不一样，code只能使用一次，5分钟未被使用自动过期。|
+|mail.nextxx.cn:8080 | correct | 配置域名与访问域名完全一致|
+|email.nextxx.cn | error | 配置域名必须与访问域名完全一致|
+|support.mail.nextxx.cn | error | 配置域名必须与访问域名完全一致|
+|*.nextxx.cn | error | 不支持泛域名设置|
+|mail.nextxx.cn | error | 配置域名必须与访问域名完全一致，包括端口号|
 
->权限说明：
->跳转的域名须完全匹配access_token对应第三方应用的可信域名，否则会返回错误。
+>假定配置的可信域名是 
+>mail.nextxx.cn
 
-返回结果：
-```json
-{
-   "errcode": 0,
-   "errmsg": "ok",
-   "CorpId":"CORPID",
-   "UserId":"USERID",
-   "DeviceId":"DEVICEID",
-   "user_ticket": "USER_TICKET"，
-   "expires_in":7200
-}
-```
-
-|参数 | 说明 |
-| -------- |-------------------------------------------- |
-|errcode | 返回码|
-|errmsg | 对返回码的文本描述内容|
-|CorpId | 用户所属企业的corpid|
-|UserId | 用户在企业内的UserID，如果该企业与第三方应用有授权关系时，返回明文UserId，否则返回密文UserId|
+|访问链接 | 是否正确 | 原因 |
+| -------- | -------- |-------------------------------------------- |
+|https://mail.nextxx.cn/openapi/helloworld | correct | 配置域名与访问域名完全一致 |
+|http://mail.nextxx.cn/openapi/redirect | correct | 配置域名与访问域名完全一致，与协议头/链接路径无关|
+|https://exmail.nextxx.cn/openapi/helloworld | error | 配置域名必须与访问域名完全一致|
