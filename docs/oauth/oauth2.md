@@ -26,19 +26,19 @@ title:
 返回结果：
 ```json
 {
-   "errcode": 0,
-   "errmsg": "ok",
+   "errorCode": 0,
+   "errorMessage": "ok",
    "CorpId":"CORPID",
    "UserId":"USERID",
    "DeviceId":"DEVICEID",
    "user_ticket": "USER_TICKET"，
-   "expires_in":7200
+   "expiresIn":7200
 }
 ```
 
 |参数 | 说明 |
 | -------- |-------------------------------------------- |
-|errcode | 返回码|
-|errmsg | 对返回码的文本描述内容|
+|errorCode | 返回码|
+|errorMessage | 对返回码的文本描述内容|
 |CorpId | 用户所属企业的corpid|
 |UserId | 用户在企业内的UserID，如果该企业与第三方应用有授权关系时，返回明文UserId，否则返回密文UserId|

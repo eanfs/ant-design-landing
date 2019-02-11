@@ -12,7 +12,7 @@ title:
 该API用于通过永久授权码换取NexT+的授权信息。 永久code的获取，是通过临时授权码使用get_permanent_code 接口获取到的permanent_code。
 
 请求方式：POST（HTTPS）
-请求地址： https://open.nextxx.cn/openapi/service/get_auth_info?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://open.nextxx.cn/openapi/openapi/oauth/auth-info?suite_access_token=SUITE_ACCESS_TOKEN
 
 > 请求包体：
 >
@@ -33,14 +33,9 @@ title:
 >返回结果：
 ```json
 {
-    "errcode":0 ,
-    "errmsg":"ok" ,
-    "dealer_corp_info": 
-    {
-        "corpid": "xxxx",
-        "corp_name": "name"
-    },
-    "auth_corp_info": 
+    "errorCode":0 ,
+    "errorMessage":"ok" ,
+    "authCorpInfo": 
     {
         "corpid": "xxxx",
         "corp_name": "name",
@@ -57,7 +52,7 @@ title:
         "corp_sub_industry": "计算机软件/硬件/信息服务",
         "location":"广东省广州市"
     },
-    "auth_info":
+    "authInfo":
     {
         "agent" :
         [
@@ -67,23 +62,6 @@ title:
                 "round_logo_url":"xxxxxx",
                 "square_logo_url":"yyyyyy",
                 "appid":1,
-                "privilege":
-                {
-                    "level":1,
-                    "allow_party":[1,2,3],
-                    "allow_user":["zhansan","lisi"],
-                    "allow_tag":[1,2,3],
-                    "extra_party":[4,5,6],
-                    "extra_user":["wangwu"],
-                    "extra_tag":[4,5,6]
-                }
-            },
-            {
-                "agentid":2,
-                "name":"NAME2",
-                "round_logo_url":"xxxxxx",
-                "square_logo_url":"yyyyyy",
-                "appid":5
             }
         ]
     }
@@ -95,7 +73,7 @@ title:
 | 参数 | 说明 |
 | --------    | -------------------------------------------- | -------- |
 |access_token | 授权方（企业）access_token,最长为512字节|
-|expires_in | 授权方（企业）access_token超时时间|
+|expiresIn | 授权方（企业）access_token超时时间|
 |auth_corp_info | 授权方企业信息|
 |corpid | 授权方NexT+id|
 |corp_name | 授权方企业名称|
