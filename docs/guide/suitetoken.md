@@ -18,14 +18,14 @@ suite_ticket实际有效期为30分钟，请永远使用最新接收到的suite_
 通过本接口获取的suite_access_token有效期为2小时，开发者需要进行缓存，不可频繁获取。
 
 请求方式：POST（HTTPS）  
-请求地址： http://test-open.gateway.workdesk.esenyun.com/eop/openapi/suite-token
+请求地址： https://open.nextxx.cn/openapi/oauth/suite-token
 >
 > 请求包体：
 ```json
 {
-    "suite_id":"demodcf07cad2000c" ,
-    "suite_secret": "demo_secret", 
-    "suite_ticket": "demo_suite_ticket-CGYJ3_NhYexMyw" 
+    "suiteId":"demodcf07cad2000c" ,
+    "suiteSecret": "demo_secret", 
+    "suiteTicket": "demo_suite_ticket-CGYJ3_NhYexMyw" 
 }
 ```
 >
@@ -33,16 +33,16 @@ suite_ticket实际有效期为30分钟，请永远使用最新接收到的suite_
 
 | 参数 | 是否必须 | 说明 |
 | --------    | -------------------------------------------- | -------- |
-|suite_id     | 是 | 应用id|
-|suite_secret | 是 | 应用secret|
-|suite_ticket | 是 | NexT+后台推送的ticket|
+|suiteId     | 是 | 应用id|
+|suiteSecret | 是 | 应用secret|
+|suiteTicket | 是 | NexT+后台推送的ticket|
 
 > 返回结果：
 ```json
 {
-    "errcode":0 ,
-    "errmsg":"ok" ,
-    "suiteAccessToken":"61W3mEpU66027wgNZ_MhGHNQDHnFATkDa9-2llMBjUwxRSNPbVsMmyD-yq8wZETSoE5NQgecigDrSHkPtIYA",
+    "errorCode":0 ,
+    "errorMessage":"ok" ,
+    "suite_access_token":"61W3mEpU66027wgNZ_MhGHNQDHnFATkDa9-2llMBjUwxRSNPbVsMmyD-yq8wZETSoE5NQgecigDrSHkPtIYA",
     "expiresIn":7200
 }
 ```
@@ -50,4 +50,4 @@ suite_ticket实际有效期为30分钟，请永远使用最新接收到的suite_
 
 | 参数 | 说明 |
 | -------- | -------------------------------------------- |
-|suiteAccessToken | 第三方应用access_token,最长为512字节 |
+|suite_access_token | 第三方应用access_token,最长为512字节 |

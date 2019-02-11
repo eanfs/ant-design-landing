@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 8
 category:
   zh-CN: 应用授权
   en-US: Guide
@@ -36,11 +36,11 @@ auth_type | 否 | 授权类型：0 正式授权， 1 测试授权。 默认值�
 返回结果：
 
 {
-    "errcode": 0,
-    "errmsg": "ok"
+    "errorCode": 0,
+    "errorMessage": "ok"
 }
 参数说明：
 
 参数 | 说明
-errcode | 返回码
-errmsg | 对返回码的文本描述内容
+errorCode | 返回码
+errorMessage | 对返回码的文本描述内容

@@ -56,7 +56,7 @@ NexT+会先判断URL服务是否具备解析NexT+推送消息的能力。
 
 | 参数      | 类型                                          |  说明    |
 | -------- | -------------------------------------------- | -------- |
-| msg_signature | | String | NexT+加密签名，msg_signature计算结合了企业填写的token、请求中的timestamp、nonce、加密的消息体。签名计算方法参考 **消息体签名检验**|
+| msg_signature | String | NexT+加密签名，msg_signature计算结合了企业填写的token、请求中的timestamp、nonce、加密的消息体。签名计算方法参考 **消息体签名检验**|
 | timestamp | Integer | 时间戳。与nonce结合使用，用于防止请求重放攻击。|
 | nonce | String | 随机数。与timestamp结合使用，用于防止请求重放攻击。|
 | echostr | String | 加密的字符串。需要解密得到消息内容明文，解密后有random、msg_len、msg、receiveid四个字段，其中msg即为消息内容明文 |
@@ -144,8 +144,8 @@ NexT+在回调企业指定的URL时，是通过特定的IP发送出去的。如�
 >返回结果：
 ```json
 {
-    "errcode": 0,
-    "errmsg": "ok",
+    "errorCode": 0,
+    "errorMessage": "ok",
     "ip_list": ["101.226.103.*", "101.226.62.*"]
 }
 ```
@@ -161,7 +161,7 @@ NexT+在回调企业指定的URL时，是通过特定的IP发送出去的。如�
 
 ```__react
 const callbackData = [
-  { title: '回调服务demo', content: '开发者可参考 NexT+的实现', name: 'encyptdemo', url: 'http://open.open.nextxx.cn/wwopen/downloadfile/java.zip', img: 'https://gw.alipayobjects.com/zos/rmsportal/SVDdpZEbAlWBFuRGIIIL.svg' },
+  { title: '回调服务demo', content: '开发者可参考 NexT+的实现', name: 'encyptdemo', url: 'http://open.open.nextxx.cn/wwopen/downloadfile/java.zip', img: 'https://download.esenyun.com/resources/nextogo.svg' },
 ];
 
 

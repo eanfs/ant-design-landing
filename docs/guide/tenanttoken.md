@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 6
 category:
   zh-CN: 应用授权
   en-US: Guide
@@ -17,7 +17,7 @@ title:
 调用企业接口所需的access_token获取方法如下。
 
 请求方式：POST（HTTPS）
-请求地址： https://open.nextxx.cn/openapi/service/get_corp_token?suite_access_token=SUITE_ACCESS_TOKEN
+请求地址： https://open.nextxx.cn/openapi/oauth/corp-token?suite_access_token=SUITE_ACCESS_TOKEN
 
 >请求包体：
 ```json
@@ -36,10 +36,10 @@ title:
 >返回结果：
 ```json
 {
-    "errcode":0 ,
-    "errmsg":"ok" ,
-    "access_token": "xxxxxx", 
-    "expires_in": 7200
+    "errorCode":0 ,
+    "errorMessage":"ok" ,
+    "accessToken": "xxxxxx", 
+    "expiresIn": 7200
 }
 ```
 
@@ -47,5 +47,5 @@ title:
 
 参数 | 说明
 | --------    | -------------------------------------------- | -------- |
-| access_token | 授权方（企业）access_token,最长为512字节 |
-| expires_in | 授权方（企业）access_token超时时间 |
+| accessToken | 授权方（企业）access_token,最长为512字节 |
+| expiresIn | 授权方（企业）access_token超时时间 |
