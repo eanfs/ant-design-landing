@@ -17,6 +17,6 @@ title:
 
 各个事件皆假设指令回调URL设置为：https://127.0.0.1/suite/callback
 
-收到的数据包中ToUserName为产生事件的SuiteId，AgentID为空
+收到的数据包中ToUserName为产生事件的SuiteId为空
 
 各个事件的xml包仅是接收的数据包中的Encrypt参数解密后的内容说明

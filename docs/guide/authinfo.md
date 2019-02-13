@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 category:
   zh-CN: 应用授权
   en-US: Guide

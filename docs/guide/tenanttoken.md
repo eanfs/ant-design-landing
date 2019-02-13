@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 5
 category:
   zh-CN: 应用授权
   en-US: Guide
@@ -31,7 +31,7 @@ title:
 | 参数 | 是否必须 | 说明 |
 | --------    | -------------------------------------------- | -------- |
 |auth_corpid | 是 | 授权方corpid|
-|permanent_code | 是 | 永久授权码，通过get_permanent_code获取|
+|permanent_code | 是 | 永久授权码，通过[获取企业永久授权码]获取|
 
 >返回结果：
 ```json
