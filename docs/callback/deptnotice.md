@@ -19,10 +19,9 @@ title:
 <xml>
     <SuiteId><![CDATA[ww4asffe99e54c0f4c]]></SuiteId>
     <AuthCorpId><![CDATA[wxf8b4f85f3a794e77]]></AuthCorpId>
-    <InfoType><![CDATA[change_contact]]></InfoType>
+    <InfoType><![CDATA[create_group]]></InfoType>
     <TimeStamp>1403610513</TimeStamp>
-    <ChangeType><![CDATA[create_party]]></ChangeType>
-    <Id>2</Id>
+    <GroupId>2</GroupId>
     <Name><![CDATA[张三]]></Name>
     <ParentId><![CDATA[1]]></ParentId>
     <Order>1</Order>
@@ -35,13 +34,14 @@ title:
 | -------- | -------------------------------------------- |
 |SuiteId | 第三方应用ID|
 |AuthCorpId | 授权企业的CorpID|
-|InfoType | 固定为change_contact|
+|InfoType | 固定为create_group|
 |TimeStamp | 时间戳|
-|ChangeType | 固定为create_party|
-|Id | 部门Id|
+|GroupId | 部门Id|
 |Name | 部门名称|
-|ParentId | 父部门id|
-|Order | 部门排序|
+|ImageUrl | 部门Id|
+|Name | 部门名称|
+|DisplayName | 父部门id|
+|GroupType | 部门排序|
 **说明： 由通讯录应用发起的新增部门触发的事件不回调给通讯录应用。**
 
 ### 更新部门事件
@@ -53,10 +53,9 @@ title:
 <xml>
     <SuiteId><![CDATA[ww4asffe99e54c0f4c]]></SuiteId>
     <AuthCorpId><![CDATA[wxf8b4f85f3a794e77]]></AuthCorpId>
-    <InfoType><![CDATA[change_contact]]></InfoType>
+    <InfoType><![CDATA[update_group]]></InfoType>
     <TimeStamp>1403610513</TimeStamp>
-    <ChangeType><![CDATA[update_party]]></ChangeType>
-    <Id>2</Id>
+    <GroupId>2</GroupId>
     <Name><![CDATA[张三]]></Name>
     <ParentId><![CDATA[1]]></ParentId>
 </xml>
@@ -70,9 +69,12 @@ title:
 |InfoType | 固定为change_contact |
 | TimeStamp | 时间戳|
 |ChangeType | 固定为update_party|
-| Id | 部门Id|
-| Name | 部门名称，仅当该字段发生变更时传递|
-| ParentId | 父部门id，仅当该字段发生变更时传递|
+|GroupId | 部门Id|
+|Name | 部门名称|
+|ImageUrl | 部门Id|
+|Name | 部门名称|
+|DisplayName | 父部门id|
+|GroupType | 部门排序|
 **说明： 由通讯录应用发起的更新部门触发的事件不回调给通讯录应用。**
 
 ### 删除部门事件
@@ -84,19 +86,17 @@ title:
 <xml>
     <SuiteId><![CDATA[ww4asffe99e54c0f4c]]></SuiteId>
     <AuthCorpId><![CDATA[wxf8b4f85f3a794e77]]></AuthCorpId>
-    <InfoType><![CDATA[change_contact]]></InfoType>
+    <InfoType><![CDATA[delete_group]]></InfoType>
     <TimeStamp>1403610513</TimeStamp>
-    <ChangeType><![CDATA[delete_party]]></ChangeType>
-    <Id>2</Id>
+    <GroupId>2</GroupId>
 </xml>
 ```
 >参数说明：
 
 |参数 | 说明|
 | -------- | -------------------------------------------- |
-|SuiteId | 第三方应用ID|
-|AuthCorpId | 授权企业的CorpID|
-|InfoType | 固定为change_contact|
-TimeStamp | 时间戳|
-|ChangeType | 固定为delete_party|
-|Id | 部门Id|
+| SuiteId | 第三方应用ID|
+| AuthCorpId | 授权企业的CorpID|
+| InfoType | 固定为change_contact|
+| TimeStamp | 时间戳|
+| GroupId | 部门Id|

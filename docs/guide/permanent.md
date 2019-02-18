@@ -49,9 +49,8 @@ title:
         "corp_wxqrcode": "zzzzz",
         "corp_scale": "1-50人",
         "corp_industry": "IT服务",
-        "corp_sub_industry": "计算机软件/硬件/信息服务",
-        "location":"广东省广州市"
-    },
+        "corp_sub_industry": "计算机软件/硬件/信息服务"
+      },
     "authInfo":
     {
         "agent" :
@@ -61,13 +60,14 @@ title:
                 "name":"NAME",
                 "round_logo_url":"xxxxxx",
                 "square_logo_url":"yyyyyy",
-                "appid":1,
+                "appid": "demo818760xxxxxx1604eded2cf0000",
             }
         ]
     },
     "authUserInfo":
     {
-        "userid":"aa",
+        "id": "demo8ff35d8dc4xxxxxx8de2fb80000c",
+        "userid":"useriddeom1",
         "name":"xxx",
         "avatar":"http://xxx"
     }
